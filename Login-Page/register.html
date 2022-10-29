@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Register</title>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="images/swift-logo.png" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="register__section">
+            <div class="register__container">
+                <div class="register__form__content">
+                    <div class="register__form__header">
+                        <h1>Register</h1>
+                        <p>Hello there! Kindly fill all required <span>*</span></p>
+                    </div>
+        
+                    <div class="register__form__form">
+                        <form action="/register_succes.html">
+                            <div class="grid form-full-name">
+                                <div class="field first-name">
+                                    <div class="input-area">
+                                    <label for="email" class="">First Name <span>*</span></label>
+                                    <div class="email-field">
+                                        <input type="first-name" id="first-name" placeholder="First Name" required>
+                                    </div>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="error error-txt">First Name cannot be empty</div>
+                                </div>
+                                <div class="field last-name">
+                                    <div class="input-area">
+                                    <label for="email" class="">Last Name <span>*</span></label>
+                                    <div class="email-field">
+                                        <input type="last-name" id="last-name" placeholder="Last Name" required>
+                                    </div>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="error error-txt">Last Name cannot be empty</div>
+                                </div>
+                            </div>
+                            <div class="grid form-email-phone">
+                                <!--Email-->
+                                <div class="field email">
+                                    <div class="input-area">
+                                    <label for="email" class="">Email <span>*</span></label>
+                                    <div class="email-field">
+                                        <input type="email" id="email" placeholder="Email Address" required>
+                                    </div>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="error error-txt">Email cannot be empty</div>
+                                </div>
+                                <!--Phone Number-->
+                                <div class="field phone">
+                                    <div class="input-area">
+                                        <label for="password" class="">Phone Number <span>*</span></label>
+                                        <div class="telephone-field">
+                                            <input type="tel" id="password" placeholder="XXX-XXX-XXXX" required>
+                                        </div>
+                                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="error error-txt">Phone number cannot be empty</div>
+                                </div>
+                            </div>
+                            <div class="grid form-date-color">
+                                <!--Date-->
+                                <div class="field date">
+                                    <div class="input-area">
+                                    <label for="date" class="">Date of Birth <span>*</span></label>
+                                    <div class="email-field">
+                                        <input type="date" id="date" required>
+                                    </div>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    </div>
+                                </div>
+                                <!--Color-->
+                                <div class="field color">
+                                    <div class="input-area">
+                                        <label for="color" class="">Favourite Color <span>*</span></label>
+                                        <div class="color-field">
+                                            <input type="color" id="color" required>
+                                        </div>
+                                        <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <div class="error error-txt">Phone number cannot be empty</div>
+                                </div>
+                            </div>
+                            <div class="field gender">
+                                <div class="input-area">
+                                    <label for="color">Gender <span>*</span></label>
+                                    <div class="gender-field">
+                                        <select name="gender" id="gender" required>
+                                            <option value="">~ Please Select ~</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="error error-txt">Phone number cannot be empty</div>
+                            </div>
+
+                            <div class="form__submit">
+                                <input type="submit" value="Register" id="register">
+                            </div>
+                            <div class="new">
+                                <span>Already have an account?</span>
+                                <span><a href="index.html">Login</a></span>
+                            </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+    </main>
+    <script src="registerValidation.js"></script>
+    <script>
+        // Function to authenticate a user
+        // function authenticateUser() {
+        //   // Set authentication status to true
+        //   localStorage.setItem("authenticated", true);
+        //   // Redirect user to the dashboard
+        //   window.location.assign("./register_success.html");
+        // }
+      </script>
+</body>
+</html>

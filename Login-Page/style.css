@@ -1,0 +1,318 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.hero{
+    width: 89%;
+    margin: 25px auto 0; 
+}
+
+.hero img{
+    width: 85px;
+}
+
+.login__section{
+    margin-top: 20px;
+}
+
+.login__container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    'image'
+    'text';
+    gap: 30px;
+}
+
+.login__illustration{
+    grid-area: image;
+    text-align: center;
+}
+
+.login__illustration img{
+    width: 100%;
+}
+
+.login__form__content{
+    grid-area: text;
+    /* border: 1px solid red; */
+    width: 89%;
+    margin: 0 auto 60px;
+}
+
+.login__form__header{
+    margin-bottom: 25px;
+}
+
+.login__form__header h1{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 6px;
+}
+
+.login__form__header p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.email-field,
+.password-field{
+    position: relative;
+}
+
+.email-field:before{
+    content: url('images/envelope.png');
+    position: absolute;
+    top: 15px;
+    left: 7px;
+    width: 30px;
+}
+
+.password-field:before{
+    content: url('images/lock.png');
+    position: absolute;
+    top: 15px;
+    left: 7px;
+    width: 30px;
+}
+
+.forgot__password{
+    text-align: right;
+    font-size: 15px;
+    margin: -10px 0 40px;
+}
+
+.forgot__password a{
+    color: hsl(234, 100%, 8%);
+    text-decoration: underline;
+}
+
+.forgot__password a:hover{
+    text-decoration: none;
+}
+
+form .field{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form .field.shake{
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake{
+    0%, 100%{
+        margin-left: 0;
+    }
+    20%, 80%{
+        margin-left: -12px; 
+    }
+    40%, 60%{
+        margin-left: 12px; 
+    }
+}
+
+label{
+    font-size: 0.95em;
+}
+
+label span{
+    color: red;
+}
+form{
+    font-family: 'Open Sans', sans-serif;
+}
+
+form .field .input-area{
+    position: relative;
+}
+
+form input{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 10px 0 10px 38px;
+    margin: 7px 0;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border: 0.5px solid hsla(234, 100%, 8%,0.5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+input[type=text]:focus{
+    border: 2px solid hsla(234, 100%, 8%,0.5);
+}
+
+form .field.error input{
+    border-color: hsl(354, 70%, 54%);
+}
+
+form .field.err input{
+    color: hsl(0, 100%, 74%);
+}
+
+form input::placeholder{
+    color: rgba(52, 51, 51, 0.297);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form__first__name, 
+.form__last__name,
+.form__email__id{
+    margin-bottom: 10px;
+}
+
+form .field i{
+    position: absolute;
+    top: 65%;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+} 
+
+form .field .icon{
+    left: 15px;
+    color: #bfbfbf;
+    text-align: right;
+}
+
+form .field .error-icon{
+    right: 20px;
+    color: hsl(0, 100%, 74%);
+}
+
+form .field .error-txt{
+    color: hsl(0, 100%, 74%);
+    margin-top: 5px;
+    text-align: right;
+    font-style: italic;
+    font-size: 15px;
+}   
+
+form .field .error{
+    display: none;
+}
+
+form .field.error .error{
+    display: block;
+}
+
+input[type=submit] {
+    background-color: hsl(234, 100%, 8%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+input[type=submit]:hover{
+    background-color: hsla(234, 100%, 8%,0.9);
+}
+
+.new span{
+    font-size: 17px;
+}
+
+.new span:last-child a{
+    color: hsl(40, 93%, 42%);
+    text-decoration: underline;
+}
+
+.new span:last-child a:hover{
+    text-decoration: none;
+}
+
+    @media only screen and (min-width: 600px){
+    .hero,
+    .login__form__content{
+        width: 82%;
+    }
+
+    .login__form__header h1{
+        font-size: 38px;
+    }
+
+    .login__form__header p{
+        font-size: 19px;
+    }
+
+    form label{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 500px){
+    .login__illustration img{
+        width: fit-content;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .login__illustration{
+        text-align: center;
+    }
+    
+    .login__illustration img{
+        width: fit-content;
+    }
+}
+
+@media only screen and (min-width: 1000px){    
+    .hero{
+        width: 82%;
+        margin-top: 30px;
+    }
+    .login__section{
+        margin-top: 90px;
+    }
+
+    .login__container{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1.1fr;
+        grid-template-areas: 
+        'text image';
+        gap: 10px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .login__illustration img{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .hero,
+    .login__container{
+        width: 1350px;
+        margin: 0 auto;
+    }
+
+    .hero{
+        margin: 25px auto 0;
+    }
+
+    .login__form__content{
+        width: 100%;
+    }
+    
+
+}

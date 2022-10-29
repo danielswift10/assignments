@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="images/swift-logo.png" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="login__section">
+            <div class="login__container">
+                <div class="login__illustration">
+                    <img src="images/login-illustration.png" alt="">
+                </div>
+                <div class="login__form__content">
+                    <div class="login__form__header">
+                        <h1>Log in</h1>
+                        <p>Welcome Back! Please enter your details</p>
+                    </div>
+        
+                    <div class="login__form__form">
+                        <form action="/login_success.html">
+                            <!--Email-->
+                            <div class="field email">
+                                <div class="input-area">
+                                <label for="email" class="">Email <span>*</span></label>
+                                <div class="email-field">
+                                    <input type="email" id="email" placeholder="Email Address" required>
+                                </div>
+                                <i class="error error-icon fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="error error-txt">Email cannot be empty</div>
+                            </div>
+                            
+                            <!--Password-->
+                            <div class="field password">
+                                <div class="input-area">
+                                    <label for="password" class="">Password <span>*</span></label>
+                                    <div class="password-field">
+                                        <input type="password" id="password" placeholder="********" required>
+                                    </div>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="error error-txt">Password cannot be empty</div>
+                            </div>
+                            <div class="forgot__password"><a href="#">Forgot password?</a></div>
+                            <div class="form__submit">
+                                <input type="submit" value="Log in" id="login">
+                            </div>
+                            <div class="new">
+                                <span>New here?</span>
+                                <span><a href="register.html">Register</a></span>
+                            </div>
+                            </form>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

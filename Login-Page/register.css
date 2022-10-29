@@ -1,0 +1,289 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    list-style-type: none;
+    appearance: none;
+    -moz-appearance: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.hero{
+    width: 89%;
+    margin: 25px auto 0;
+    /* padding: 10px 0; */
+}
+
+.hero img{
+    width: 85px;
+}
+
+.register__section{
+    margin-top: 20px;
+}
+
+.register__illustration{
+    grid-area: image;
+    text-align: center;
+}
+
+.register__illustration img{
+    width: fit-content;
+}
+
+.register__form__content{
+    grid-area: text;
+    width: 89%;
+    margin: 0 auto 60px;
+}
+
+.register__form__header{
+    margin-bottom: 25px;
+}
+
+.register__form__header h1{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    border-bottom: 5px solid hsl(40, 93%, 42%);
+    width: fit-content;
+}
+
+.register__form__header p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.register__form__header p span{
+    color: red;
+}
+
+form .field{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form .field.shake{
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake{
+    0%, 100%{
+        margin-left: 0;
+    }
+    20%, 80%{
+        margin-left: -12px; 
+    }
+    40%, 60%{
+        margin-left: 12px; 
+    }
+}
+
+label{
+    font-size: 0.95em;
+}
+
+label span{
+    color: red;
+}
+
+form{
+    font-family: 'Open Sans', sans-serif;
+}
+
+form .field .input-area{
+    position: relative;
+}
+
+form input{
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 7px 0;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border: 0.5px solid hsla(234, 100%, 8%,0.5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+input[type=text]:focus{
+    border: 2px solid hsla(234, 100%, 8%,0.5);
+}
+
+form .field.error input{
+    border-color: hsl(354, 70%, 54%);
+}
+
+form .field.err input{
+    color: hsl(0, 100%, 74%);
+}
+
+form input::placeholder{
+    color: rgba(52, 51, 51, 0.297);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gender-field{
+    margin-top: 10px;
+}
+
+.gender-field select{
+    border: none;
+    outline: none;
+    background-color: none;
+    border: 0.5px solid hsla(234, 100%, 8%,0.5);
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    padding: 7px;
+    font-size: 16px;
+    
+}
+
+form .field i{
+    position: absolute;
+    top: 65%;
+    font-size: 20px;
+    pointer-events: none;
+    transform: translateY(-50%);
+} 
+
+form .field .icon{
+    left: 15px;
+    color: #bfbfbf;
+    text-align: right;
+}
+
+form .field .error-icon{
+    right: 20px;
+    color: hsl(0, 100%, 74%);
+}
+
+form .field .error-txt{
+    color: hsl(0, 100%, 74%);
+    margin-top: 5px;
+    text-align: right;
+    font-style: italic;
+    font-size: 15px;
+}   
+
+form .field .error{
+    display: none;
+}
+
+form .field.error .error{
+    display: block;
+}
+
+input[type=submit] {
+    background-color: hsl(234, 100%, 8%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 0%, 100%);
+    padding: 15px 35px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+input[type=submit]:hover{
+    background-color: hsla(234, 100%, 8%,0.9);
+}
+
+.new span{
+    font-size: 17px;
+}
+
+.new span:last-child a{
+    color: hsl(40, 93%, 42%);
+    text-decoration: underline;
+}
+
+.new span:last-child a:hover{
+    text-decoration: none;
+}
+
+    @media only screen and (min-width: 600px){
+    .hero,
+    .register__form__content{
+        width: 82%;
+    }
+
+    .register__form__header h1{
+        font-size: 38px;
+    }
+
+    .register__form__header p{
+        font-size: 19px;
+    }
+
+    form label{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .register__illustration{
+        text-align: center;
+    }
+    
+    .register__illustration img{
+        width: fit-content;
+    }
+}
+
+@media only screen and (min-width: 1000px){    
+    .hero{
+        width: 91%;
+        margin-top: 30px;
+    }
+    .register__section{
+        margin-top: 90px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 50px;
+    }
+
+    .register__illustration img{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .hero,
+    .register__container{
+        width: 1350px;
+        margin: 0 auto;
+    }
+
+    .hero{
+        margin: 25px auto 0;
+    }
+
+    .register__form__content{
+        width: 100%;
+    }
+    
+
+}
