@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+@font-face {
+    font-family: London Bridge;
+    src: url("/LondonBridge-ExtraBold.ttf");
+}
+
+body{
+    font-family: London Bridge;
+    background-color: hsl(231, 21%, 13%);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.h1{   
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    color: hsl(142, 94%, 34%);
+}
+
+.h1 a:hover{
+    text-decoration: underline;
+}
+
+.h1 a:first-child{
+    color: hsl(14, 84%, 52%);
+}
+
+.h1 a:last-child{
+    color: hsl(39, 100%, 50%);
+}
+
+h1{
+    font-size: 4.1em;
+    color: hsl(210, 99%, 50%);
+    font-weight: bolder;
+}
+
+main{
+    padding: 20px 20px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "card-red" "card-orange" "card-green" "card-blue" "card-cyan";
+    row-gap: 15px;
+}
+
+.card{
+    padding: 110px 110px;
+    width: 100%;
+}
+
+.card-red{
+    grid-area: card-red;
+    background-color: hsl(14, 84%, 52%);
+}
+
+.card-orange{
+    grid-area: card-orange;
+    background-color: hsl(39, 100%, 50%);
+}
+
+.card-green{
+    grid-area: card-green;
+    background-color: hsl(142, 94%, 34%);
+}
+
+.card-blue{
+    grid-area: card-blue;
+    background-color: hsl(199, 99%, 50%);
+}
+
+.card-cyan{
+    grid-area: card-cyan;
+    background-color: hsl(199, 99%, 50%);
+}
+
+.grid-footer{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.attribution { 
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    bottom: 0%;
+    color: hsl(14, 84%, 52%);
+    font-family: 'Poppins', sans-serif;
+} 
+
+.attribution a:first-child{ 
+    color: hsl(199, 99%, 50%); 
+}
+
+.attribution a:last-child{ 
+    color: hsl(39, 100%, 50%);
+}
+
+@media only screen and (min-width: 755px){
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+        
+    h1{
+        font-size: 6.9em;
+        color: hsl(210, 99%, 50%);
+        font-weight: bolder;
+    }
+    
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    .card{
+        padding: 63px 110px;
+        width: 100%;
+        transition: all .3s ease-in-out;
+    }
+
+    .card:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+    }
+    
+    .grid-container{
+        display: grid; 
+        grid-template-columns: 3.4fr 1.3fr 2.1fr;
+        grid-template-rows: 2.3fr 1.3fr 1.5fr;
+        grid-template-areas: 
+        "card-red card-red card-orange"
+        "card-green card-blue card-blue"
+        "card-green card-cyan card-cyan";
+        column-gap: 15px;
+        row-gap: 18px;
+    }
+}
